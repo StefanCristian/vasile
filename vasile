@@ -82,7 +82,19 @@ export local isoliveosdirx86=""$isorootdirx86"/LiveOS"
 export local isosyncdirx86=""$isorootdirx86"/rootfs"
 export local isobootdirx86=""$isorootdirx86"/boot/grub"
 
-source /usr/lib/vasile/libvasile
+if [ -f "/usr/lib/vasile/libvasile" ] ; then
+	source /usr/lib/vasile/libvasile
+   else
+   	echo "libvasile was not found in '/usr/lib/vasile/' !"
+
+   if [ -f "./libvasile" ] ; then
+	echo "Please copy it in the right directory: '/usr/lib/vasile/'"
+	echo "Using local 'libvasile' library"
+	source ./libvasile
+   fi
+fi
+
+
 
 case $1 in
 	--build64)		source /usr/share/vasile/build64
