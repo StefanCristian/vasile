@@ -91,6 +91,8 @@ if [ -f "/usr/lib/vasile/libvasile" ] ; then
 	echo "Please copy it in the right directory: '/usr/lib/vasile/'"
 	echo "Using local 'libvasile' library"
 	source ./libvasile
+	else
+		exit 0
    fi
 fi
 
