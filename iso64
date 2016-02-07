@@ -54,7 +54,6 @@ bootcoreisox64 () {
 
 cleanupisox64 () {
 	umount "$isostagingdirx64"
-	rm -rf "$isosyncdirx64"
 	rm -rf "$isostagingdirx64"
 	rm -rf "$isosupersquashdirx64"
 	rm -rf "$bootcorepath"

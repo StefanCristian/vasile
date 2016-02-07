@@ -53,7 +53,6 @@ bootcoreisox86 () {
 
 cleanupisox86 () {
 	umount "$isostagingdirx86"
-	rm -rf "$isosyncdirx86"
 	rm -rf "$isostagingdirx86"
 	rm -rf "$bootcorepath"
 	rm -rf "$isosupersquashdirx86"
